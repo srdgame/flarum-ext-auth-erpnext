@@ -96,7 +96,7 @@ class ERPNextAuthController extends AbstractOAuth2Controller
 
 	protected function getUsernameFromApi()
 	{
-		$url = $this->getERPNextApiDomain().'/frappe.auth.get_logged_user';
+		$url = $this->getERPNextApiDomain().'/frappe.auth.get_logged_user_name';
 
         $response = $this->provider->getResponse(
             $this->provider->getAuthenticatedRequest('GET', $url, $this->token)
