@@ -60,7 +60,6 @@ class ERPNextAuthController extends AbstractOAuth2Controller
             'redirectUri'     => $redirectUri,
             'approvalPrompt'  => 'force',
             'hostedDomain'    => $this->settings->get('srdgame-auth-erpnext.app_domain'),
-            'accessType'      => 'offline',
 			'urlAuthorize'    => $this->getAuthorizeUrl(),
 			'urlAccessToken'  => $this->getAccessTokenUrl(),
 			'urlResourceOwnerDetails' => $this->getResourceOwnerDetailsUrl(),
@@ -81,7 +80,7 @@ class ERPNextAuthController extends AbstractOAuth2Controller
     protected function getIdentification(ResourceOwnerInterface $resourceOwner)
     {
         return [
-            'email' => $resourceOwner->getEmail() ?: $this->getEmailFromApi()
+            'email' => $this->getEmailFromApi()
         ];
     }
 
@@ -97,6 +96,8 @@ class ERPNextAuthController extends AbstractOAuth2Controller
 
     protected function getEmailFromApi()
     {
+		/**
+		 * 
         $url = $this->getERPNextApiDomain().'/user/emails';
 
         $emails = $this->provider->getResponse(
@@ -108,5 +109,8 @@ class ERPNextAuthController extends AbstractOAuth2Controller
                 return $email['email'];
             }
         }
+		*
+		 */
+		return "xxx@xxx.com";
     }
 }
