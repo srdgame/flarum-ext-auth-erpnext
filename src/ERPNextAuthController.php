@@ -60,7 +60,7 @@ class ERPNextAuthController extends AbstractOAuth2Controller
             'redirectUri'     => $redirectUri,
             'approvalPrompt'  => 'force',
             'hostedDomain'    => $this->settings->get('srdgame-auth-erpnext.app_domain'),
-            'accessType'      => 'offline'
+            'accessType'      => 'offline',
 			'urlAuthorize'    => $this->getAuthorizeUrl(),
 			'urlAccessToken'  => $this->getAccessTokenUrl(),
 			'urlResourceOwnerDetails' => $this->getResourceOwnerDetailsUrl(),
@@ -91,7 +91,7 @@ class ERPNextAuthController extends AbstractOAuth2Controller
     protected function getSuggestions(ResourceOwnerInterface $resourceOwner)
     {
         return [
-            'username' => $resourceOwner->getFirstName(),
+            'username' => $resourceOwner->getFirstName()
         ];
     }
 
