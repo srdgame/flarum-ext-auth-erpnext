@@ -22,7 +22,7 @@ class ERPNextAuthController extends AbstractOAuth2Controller
 
 	public function getERPNextApiDomain()
 	{
-		return $this->getERPNextDomain().'/api/method'
+		return $this->getERPNextDomain().'/api/method';
 	}
 
 	public function getAuthorizeUrl()
@@ -35,7 +35,7 @@ class ERPNextAuthController extends AbstractOAuth2Controller
 	}
 	public function getResourceOwnerDetailsUrl()
 	{
-		return $this->getERPNextApiDomain().'/frappe.auth.get_logged_user'
+		return $this->getERPNextApiDomain().'/frappe.auth.get_logged_user';
 	}
 
 
