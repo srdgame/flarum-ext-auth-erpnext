@@ -54,7 +54,7 @@ class ERPNextAuthController extends AbstractOAuth2Controller
      */
     protected function getProvider($redirectUri)
     {
-        return new ERPNext([
+        return new GenericProvider([
             'clientId'        => $this->settings->get('srdgame-auth-erpnext.app_id'),
             'clientSecret'    => $this->settings->get('srdgame-auth-erpnext.app_secret'),
             'redirectUri'     => $redirectUri,
