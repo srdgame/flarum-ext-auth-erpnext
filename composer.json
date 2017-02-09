@@ -13,7 +13,7 @@
     ],
     "support": {
         "issues": "https://github.com/srdgame/flarum-ext-auth-erpnext/issues",
-        "source": "https://github.com/srdagme/flarum-ext-auth-erpnext"
+        "source": "https://github.com/srdgame/flarum-ext-auth-erpnext"
     },
     "require": {
         "flarum/core": "^0.1.0-beta.6",
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "srdgame\\Auth\\ERPNext\\": "src/"
+            "Srdgame\\Auth\\ERPNext\\": "src/"
         }
     },
     "extra": {
