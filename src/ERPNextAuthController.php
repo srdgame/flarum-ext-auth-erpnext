@@ -90,9 +90,14 @@ class ERPNextAuthController extends AbstractOAuth2Controller
     protected function getSuggestions(ResourceOwnerInterface $resourceOwner)
     {
         return [
-            'username' => $resourceOwner->getFirstName()
+            'username' => $resourceOwner->getUsernameFromApi()
         ];
     }
+
+	protected function getUsernameFromApi()
+	{
+		return 'XXXXX';
+	}
 
     protected function getEmailFromApi()
     {
