@@ -1,0 +1,37 @@
+{
+    "name": "srdgame/flarum-ext-auth-erpnext",
+    "description": "Allow users to log in with ERPNext.",
+    "type": "flarum-extension",
+    "keywords": ["authentication"],
+    "license": "GPL-3.0+",
+    "version": "v0.1.0-beta",
+    "authors": [
+        {
+            "name": "Dirk Chang",
+            "email": "dirk@kooiot.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/srdgame/flarum-ext-auth-erpnext/issues",
+        "source": "https://github.com/srdagme/flarum-ext-auth-erpnext"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.6",
+        "league/oauth2-client": "~1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "srdgame\\Auth\\ERPNext\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "ERPNext Login",
+            "icon": {
+                "name": "erpnext",
+                "backgroundColor": "#D13E32",
+                "color": "#fff"
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+srdgame-auth-erpnext:
+
+  admin:
+    erpnext_settings:
+      title: "ERPNext Settings"
+      client_id_label: "Client ID"
+      client_secret_label: "Client Secret"
+      hosted_domain_label: "Hosted Domain"
+
+  forum:
+    log_in:
+      with_erpnext_button: "Login with ERPNext"
