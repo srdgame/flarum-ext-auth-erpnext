@@ -72,7 +72,7 @@ class ERPNextAuthController extends AbstractOAuth2Controller
      */
     protected function getAuthorizationUrlOptions()
     {
-        return ['scope' => ['user:email']];
+        return ['scope' => ['all']];
 	}
 
     /**
