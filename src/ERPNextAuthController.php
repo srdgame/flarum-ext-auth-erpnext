@@ -109,7 +109,7 @@ class ERPNextAuthController extends AbstractOAuth2Controller
     {
         $url = $this->getERPNextApiDomain().'/frappe.auth.get_logged_user_email';
 
-        $emails = $this->provider->getResponse(
+        $response = $this->provider->getResponse(
             $this->provider->getAuthenticatedRequest('GET', $url, $this->token)
         );
 
