@@ -35,7 +35,7 @@ class ERPNextAuthController extends AbstractOAuth2Controller
 	}
 	public function getResourceOwnerDetailsUrl()
 	{
-		return $this->getERPNextApiDomain().'/frappe.auth.get_logged_user';
+		return $this->getERPNextApiDomain().'/frappe.integration_broker.oauth2.openid_profile';
 	}
 
 
@@ -96,23 +96,23 @@ class ERPNextAuthController extends AbstractOAuth2Controller
 
 	protected function getUsernameFromApi()
 	{
-		$url = $this->getERPNextApiDomain().'/frappe.auth.get_logged_user_name';
+		$url = $this->getResourceOwnerDetailsUrl();
 
         $response = $this->provider->getResponse(
             $this->provider->getAuthenticatedRequest('GET', $url, $this->token)
         );
 
-		return $response['message'];
+		return $response['name'];
 	}
 
     protected function getEmailFromApi()
     {
-        $url = $this->getERPNextApiDomain().'/frappe.auth.get_logged_user_email';
+		$url = $this->getResourceOwnerDetailsUrl();
 
         $response = $this->provider->getResponse(
             $this->provider->getAuthenticatedRequest('GET', $url, $this->token)
         );
 
-		return $response['message'];
+		return $response['email'];
     }
 }
