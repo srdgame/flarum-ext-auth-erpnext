@@ -27,15 +27,15 @@ class ERPNextAuthController extends AbstractOAuth2Controller
 
 	public function getAuthorizeUrl()
 	{
-		return $this->getERPNextApiDomain().'/frappe.integration_broker.oauth2.authorize';
+		return $this->getERPNextApiDomain().'/frappe.integrations.oauth2.authorize';
 	}
 	public function getAccessTokenUrl()
 	{
-			return $this->getERPNextApiDomain().'/frappe.integration_broker.oauth2.get_token';
+			return $this->getERPNextApiDomain().'/frappe.integrations.oauth2.get_token';
 	}
 	public function getResourceOwnerDetailsUrl()
 	{
-		return $this->getERPNextApiDomain().'/frappe.integration_broker.oauth2.openid_profile';
+		return $this->getERPNextApiDomain().'/frappe.integrations.oauth2.openid_profile';
 	}
 
 
