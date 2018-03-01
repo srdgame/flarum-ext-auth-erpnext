@@ -4,7 +4,7 @@
     "type": "flarum-extension",
     "keywords": ["authentication"],
     "license": "GPL-3.0+",
-    "version": "v0.1.0-beta",
+    "version": "v0.2.1",
     "authors": [
         {
             "name": "Dirk Chang",
