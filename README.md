@@ -13,4 +13,9 @@ composer require srdgame/flarum-ext-auth-erpnext
 
 
 ## Setup instructions for ERPNext ##
+1. Go to your frappe desk form
+2. Create a oauth client and give it a name (eg My Flarum)
+3. Redirects URIs: http://<flarum_domain>:<port>/auth/erpnext
+4. Default Redirect URI: http://<flarum_domain>:<port>/auth/erpnext
+
 ----------
