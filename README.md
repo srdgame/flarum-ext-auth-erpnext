@@ -17,5 +17,6 @@ composer require srdgame/flarum-ext-auth-erpnext
 2. Create a oauth client and give it a name (eg My Flarum)
 3. Redirects URIs: http://<flarum_domain>:<port>/auth/erpnext
 4. Default Redirect URI: http://<flarum_domain>:<port>/auth/erpnext
+5. From the resulting OAuth client dialog box, you will be able to access the **Client ID** and the **Client Secret** will you will need to paste into the settings box on the Flarum extension
 
 ----------
